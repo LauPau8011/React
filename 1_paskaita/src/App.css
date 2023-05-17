@@ -1,0 +1,14 @@
+.card img,
+p {
+  width: 400px;
+  height: 300px;
+}
+
+.avatar {
+  color: blueviolet;
+  border-radius: 50%;
+  background-color: chartreuse;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
