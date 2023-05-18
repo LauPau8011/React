@@ -1,6 +1,8 @@
-import Car from "./components/Car";
-import FuncCar from "./components/FuncCar";
-import FuncBestCar from "./components/FuncBestCar";
+import Car from './components/Car';
+import FuncCar from './components/FuncCar';
+import FuncBestCar from './components/FuncBestCar';
+import FuncCounter from './components/FuncCounter';
+import Counter from './components/CounterClass';
 
 const App = () => {
   return (
@@ -9,14 +11,14 @@ const App = () => {
       <Car />
       <br />
       <br />
-      <br />
       <h2>Function with one state</h2>
       <FuncCar />
       <br />
       <br />
-      <br />
       <h2>Function with separate states</h2>
       <FuncBestCar />
+      <FuncCounter />
+      <Counter />
     </div>
   );
 };
