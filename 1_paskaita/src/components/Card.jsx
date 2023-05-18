@@ -1,27 +1,45 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-// funkciniam komponente nera zodelio this.
-const FuncCar = () => {
-  const [state, setState] = useState({
-    brand: "Ford",
-    model: "Mustang",
-    color: "red",
-    year: 1964,
-  });
-
-  const changeColor = () => {
-    setState({ ...state, color: "blue" });
-  };
-
-  return (
-    <div>
-      <h1>My car {state.brand}</h1>
-      <p>
-        It is a {state.color} {state.model} from {state.year}
-      </p>
-      <button onClick={changeColor}>Change color</button>
-    </div>
-  );
+const imgStyle = {
+  objectFit: "cover",
+  width: "100%",
+  borderRadius: "10px 10px 0 0",
 };
 
-export default FuncCar;
+const pStyle = {
+  color: "grey",
+  textAlign: "justify",
+  margin: "0",
+  padding: "10px",
+};
+
+const hStyle = {
+  paddingLeft: "10px",
+  fontFamily: "Arial",
+  margin: "10px 0",
+};
+
+const divStyle = {
+  width: "300px",
+  margin: "1rem",
+  boxShadow: "0 0 10px grey",
+  borderRadius: "10px",
+};
+
+function Card(props) {
+  return (
+    <div style={divStyle}>
+      <img style={imgStyle} src={props.imageUrl} alt={props.title} />
+      <h2 style={hStyle}>{props.title}</h2>
+      <p style={pStyle}>{props.subtitle}</p>
+    </div>
+  );
+}
+
+Card.propTypes = {
+  imageUrl: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+};
+
+export default Card;

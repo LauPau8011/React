@@ -1,20 +1,25 @@
-.card img,
-p {
-  width: 400px;
-  height: 300px;
-}
-
-.avatar {
-  color: blueviolet;
-  border-radius: 50%;
-  background-color: chartreuse;
-  width: 50px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
 .products {
   display: flex;
-  margin: auto;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.productCard {
+  margin: 1rem;
+  width: 20rem;
+}
+
+.productsTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.category {
+  font-size: 0.9rem;
+  color: grey;
+}
+
+.price {
+  font-weight: bold;
 }
