@@ -1,14 +1,8 @@
-import React from "react";
-import Hero from "./Hero";
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-const App = () => {
-  return (
-    <div>
-      <Hero title="Welcome to My Website" subtitle="Explore and enjoy!" />
-      <Hero title="About Us" />
-      <Hero subtitle="Contact us for more information" />
-    </div>
-  );
-};
-
-export default App;
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});

@@ -1,5 +1,6 @@
-//Sukurti Hero komponentą, kuris turės du props:title  ir subtitle.Jei title arba subtitle nepaduotas -h1 arba h2
-// elementai net nesusikurs
+//sukurti Hero komponentą, kuris turės du props:title  ir subtitle.Jei title arba subtitle nepaduotas -h1 arba h2
+//elementai net nesusikurs
+import React from "react";
 
 const Hero = ({ title, subtitle }) => {
   return (

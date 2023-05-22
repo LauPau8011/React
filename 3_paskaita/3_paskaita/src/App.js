@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import Hero from "./components/Hero";
+import Button from "./components/Button";
+import MoodChecker from "./components/MoodChecker";
+import MoodCheckerV2 from "./components/MoodCheckerV2";
+import "./App.css";
+import MoodCheckerV3 from "./components/MoodCheckerV3";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <Hero title="Info hero" subtitle="Info subtitle" />;
+        <br />
+        <Hero title="Info hero" />
+        <br />
+        <Hero subtitle="Info subtitle" />
+      </div>
+      <div>
+        <Button title="TEXT" variant="text" />
+        <Button title="CONTAINED" variant="contained" />
+        <Button title="OUTLINED" variant="outlined" />
+      </div>
+      <div>
+        <MoodChecker />
+      </div>
+      <div>
+        <MoodCheckerV2 />
+      </div>
+      <div>
+        <MoodCheckerV3 />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
