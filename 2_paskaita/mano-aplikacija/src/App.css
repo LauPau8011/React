@@ -1,0 +1,21 @@
+.hero {
+  background-color: aqua;
+  margin: 10px;
+  width: 500px;
+}
+.button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-contained {
+  background-color: blue;
+  color: white;
+}
+
+.button-outlined {
+  border: 2px solid blue;
+  color: blue;
+}

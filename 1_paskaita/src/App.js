@@ -10,6 +10,7 @@ import Card from "./components/Card";
 import Avatar from "./components/Avatar";
 import Product from "./components/Product";
 import Products from "./components/Products";
+import Welcome from "./components/Welcome";
 
 // apibrėžiam komponento pavadinimą, visada didžioji raidė.
 // geroji praktika: Failo pavadinimas toks pat kaip komponento pavadinimas
@@ -25,6 +26,8 @@ function App() {
 
   return (
     <div>
+      {/*  <Welcome isLoggedIn={loggedIn} />
+      <button onClick={handleLogin}>{loggedIn ? "Log out" : "Log in"}</button> */}
       <h1>Rokas</h1>
       <h2>{name}</h2> <h2>{getName()}</h2>
       <h2>{getSurname()}</h2> <h2>{surname}</h2>
