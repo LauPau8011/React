@@ -1,6 +1,7 @@
 //sukurti Hero komponentą, kuris turės du props:title  ir subtitle.Jei title arba subtitle nepaduotas -h1 arba h2
 //elementai net nesusikurs
 import React from "react";
+import PropTypes from "prop-types";
 
 const Hero = ({ title, subtitle }) => {
   return (
@@ -9,6 +10,10 @@ const Hero = ({ title, subtitle }) => {
       {subtitle && <h2>{subtitle}</h2>}
     </div>
   );
+};
+Hero.protTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
 };
 
 export default Hero;

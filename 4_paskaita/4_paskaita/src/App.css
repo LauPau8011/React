@@ -1,0 +1,27 @@
+.product-container {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  margin-right: 20px;
+  width: 700px;
+  height: 500px;
+}
+
+.props {
+  flex: 1;
+}
+
+.arrow-icon {
+  margin-right: 5px;
+}
+h3 {
+  font-size: 35px;
+}
+button {
+  margin: 15px;
+}
+.fontS {
+  font-size: 10px;
+}

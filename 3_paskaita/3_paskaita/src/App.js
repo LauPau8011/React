@@ -7,9 +7,9 @@ import MoodCheckerV3 from "./components/MoodCheckerV3";
 
 const App = () => {
   return (
-    <div>
+    <>
       <div>
-        <Hero title="Info hero" subtitle="Info subtitle" />;
+        <Hero title="Info hero" subtitle="Info subtitle" />
         <br />
         <Hero title="Info hero" />
         <br />
@@ -29,7 +29,7 @@ const App = () => {
       <div>
         <MoodCheckerV3 />
       </div>
-    </div>
+    </>
   );
 };
 
