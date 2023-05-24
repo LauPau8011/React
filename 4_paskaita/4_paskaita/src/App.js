@@ -1,6 +1,5 @@
-import React from "react";
-import Product from "./components/Product";
-import "./App.css";
+import Product from "./components/Product/Product";
+import calendar from "./images/calendar.jpg";
 
 const App = () => {
   return (
@@ -8,10 +7,20 @@ const App = () => {
       <Product
         image="https://th.bing.com/th/id/OIP.y5Y20F2sk323gRMzBNMYdwHaHa?pid=ImgDet&rs=1"
         title="Volkswagen GOLF MK2 2022 Calendar"
-        price="$1010"
-        description="12 unique designs. All pieces are printed on heavyweight 200 art paper. One size 11.7x16.5inch"
-        availability="Availability: 10 in stock"
-        category="Category: Calendars"
+        price={10}
+        description={
+          <span>
+            <div>12 unique designs</div>
+            <div>All pieces are printed on heavyweight 200 gsm art paper.</div>
+            <div>Limited to 50 pieces</div>
+            <div>
+              <div>One size:</div>
+              11.7x16.5 inch/ (297x420 mm)
+            </div>
+          </span>
+        }
+        availability={10}
+        category="Calendars"
       />
     </div>
   );
