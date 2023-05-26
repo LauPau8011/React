@@ -7,6 +7,7 @@ const Posts = () => {
   const postsExists = posts.length > 1; // Add checking if posts exists
 
   useEffect(() => {
+    //useEffect hooksas
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((resp) => resp.json())
       .then((response) => {

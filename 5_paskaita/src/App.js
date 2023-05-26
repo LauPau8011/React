@@ -11,6 +11,7 @@
 
 import Photo from "./components/Photo/Photo";
 import Posts from "./components/Posts/Posts";
+import RandomPhotos from "./components/RandomPhoto/RandomPhoto";
 
 const App = () => {
   return (
@@ -20,6 +21,9 @@ const App = () => {
       </div>
       <div>
         <Photo />
+      </div>
+      <div>
+        <RandomPhotos />
       </div>
     </>
   );
