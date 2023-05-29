@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./ProductCard.css";
 
 const ProductCard = ({ image, title, price }) => {
-  const [addedToCart, setAddedToCart] = useState(false); //naudojamas state kintamasis "isAddedToCart" ir funkcija "handleAddToCart", kurie valdo "Add to Cart" mygtuko paspaudimus
+  const [addedToCart, setAddedToCart] = useState(false);
 
   const handleAddToCart = () => {
     setAddedToCart(true);
@@ -26,12 +26,13 @@ const ProductCard = ({ image, title, price }) => {
     </div>
   );
 };
+
 ProductCard.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  onAddToCart: PropTypes.func.isRequired,
-  onRemoveFromCart: PropTypes.func.isRequired,
+  /* onAddToCart: PropTypes.func.isRequired,
+  onRemoveFromCart: PropTypes.func.isRequired, */
 };
 
 export default ProductCard;
