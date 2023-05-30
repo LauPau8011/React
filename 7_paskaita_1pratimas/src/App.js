@@ -3,7 +3,7 @@ import "./App.css";
 
 const App = () => {
   const [inputText, setInputText] = useState("");
-  const [backgroundColor, setBackgroundColor] = useState("white");
+  const [backgroundColor, setBackgroundColor] = useState("white"); //naudojame React state kintamąjį backgroundColor, kuris priskiriamas style atributui
 
   useEffect(() => {
     const inputLength = inputText.length;
