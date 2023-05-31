@@ -4,7 +4,7 @@ import sunflowersImage from "./images/sunflowers.jpg";
 import forestImage from "./images/forest.jpg";
 
 const images = [
-  { id: 1, title: "Pirmas paveikslėlis", image: sunflowersImage },
+  { id: 1, title: "Pirmas paveikslėlis", image: sunflowersImage }, //sukuriamas paveikslėlių masyvas
   { id: 2, title: "Antras paveikslėlis", image: sunflowersImage },
   { id: 3, title: "Trečias paveikslėlis", image: sunflowersImage },
   { id: 4, title: "Ketvirtas paveikslėlis", image: forestImage },
@@ -12,7 +12,7 @@ const images = [
   { id: 6, title: "Šeštas paveikslėlis", image: forestImage },
 ];
 const Hero = () => {
-  const sunflowersImages = images.slice(0, 3);
+  const sunflowersImages = images.slice(0, 3); //naujas masyvas, kuris gaunamas iš images masyvo sujungus pirmus tris elementus
   const forestImages = images.slice(3, 6);
 
   return (
@@ -33,12 +33,16 @@ const Hero = () => {
         </p>
       </div>
       <div className="card-row">
-        {sunflowersImages.map((image) => (
-          <div className="card" key={image.id}>
-            <img src={image.image} alt={image.title} className="card-image" />
-            <p className="card-title">{image.title}</p>
-          </div>
-        ))}
+        {sunflowersImages.map(
+          (
+            image //Kiekvienas masyvo elementas yra paverčiamas į div elementą su klase "card".
+          ) => (
+            <div className="card" key={image.id}>
+              <img src={image.image} alt={image.title} className="card-image" />
+              <p className="card-title">{image.title}</p>
+            </div>
+          )
+        )}
       </div>
       <div className="card-row">
         {forestImages.map((image) => (
@@ -53,6 +57,8 @@ const Hero = () => {
 };
 
 const App = () => {
+  //Hero komponentas yra kviečiamas iš App komponento ir atvaizduoja turinį, kuris yra susijęs su hero
+  // sekcija. Turinys yra supakuotas į Hero komponentą, kad būtų lengviau perpanaudoti ir organizuoti kodą.
   return (
     <div className="app">
       <Hero />
