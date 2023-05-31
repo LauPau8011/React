@@ -1,0 +1,25 @@
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+}
+
+.entry-text {
+  margin-right: 10px;
+  width: 150px;
+}
+
+.delete-button {
+  background: red;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+.submitForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+}
