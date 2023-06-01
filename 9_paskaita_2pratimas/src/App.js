@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 const App = () => {
-  //App komponentas su dviem pradinių būsenų (state) kintamaisiais
   const [entries, setEntries] = useState([]); //masyvas, kuriame saugomi visi įrašai
   const [inputValue, setInputValue] = useState(""); //kintamasis, kuriame saugoma input reikšmė
 

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 const App = () => {
-  // App componentas su dviem state data ir isLoading
   const [data, setData] = useState([]); //state naudojamas saugoti gautus duomenis iš API užklausos
   const [isLoading, setIsLoading] = useState(true); //state naudojamas nustatyti, ar duomenys iš API dar kraunasi ar jau buvo įkelti.
 
@@ -20,9 +19,9 @@ const App = () => {
   }, []);
 
   const handleDelete = (itemId) => {
-    //ištrinamas elementas, pagal jo  id
     setData((prevData) => prevData.filter((item) => item.id !== itemId));
   };
+  
   const formatPrice = (price) => {
     //skirta formatuoti kainos reikšmę į valiutos formatą
     return price.toLocaleString("en-US", {
