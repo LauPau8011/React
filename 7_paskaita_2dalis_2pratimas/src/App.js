@@ -15,8 +15,9 @@ function App() {
   const [backgroundImage, setBackgroundImage] = useState(backgroundImage1); //suagoma nuoroda į backgroundimage
 
   const handleLogin = () => {
+    // šia funkcija tikraname ar nėra tušti įvesties laukai ir su trim pašalinam tarpus jei jie yra
     if (username.trim() !== "" && password.trim() !== "") {
-      setLoggedIn(true);
+      setLoggedIn(true); //jei luakai ne turšti
       setErrorMessage("");
       setBackgroundImage(backgroundImage2);
     } else {
@@ -25,6 +26,7 @@ function App() {
   };
 
   const handleLogout = () => {
+    //išsiloginimo funkcija
     setLoggedIn(false);
     setUsername("");
     setPassword("");
