@@ -1,0 +1,132 @@
+/* Header.css */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 300px;
+  height: 150px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Footer.css */
+.footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+.menu-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  margin-right: 10px;
+}
+
+.menu-item:last-child {
+  margin-right: 0;
+}
+.copyright {
+  text-align: center;
+}
+
+/* Pagrindinis.css */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width-height {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ApieMus.css */
+.apie-mus {
+  text-align: center;
+}
+
+.apie-mus-heading {
+  margin-top: 20px;
+}
+
+.apie-mus-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.apie-mus-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Naujienos.css */
+.naujienos {
+  padding: 20px;
+}
+
+.naujienos .naujiena {
+  margin-bottom: 20px;
+}
+
+/* Paslaugos.css */
+.paslaugos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.paslaugos .paslauga {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+/* AtliktiDarbai.css */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.image-item {
+  width: 100%;
+}
+
+/* Kontaktai.css */
+.kontaktai form {
+  display: flex;
+  flex-direction: column;
+}
+
+.kontaktai label {
+  margin-bottom: 10px;
+}
+
+.kontaktai input,
+.kontaktai textarea {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.kontaktai button {
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+}
