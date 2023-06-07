@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouteMatch, Link } from "react-router-dom";
-import "./User.css";
+/* import "./User.css"; */
 
 function User({ users }) {
   const match = useRouteMatch("/users/:id");

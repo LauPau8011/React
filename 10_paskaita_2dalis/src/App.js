@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import heroImg from "./images/hero.jpg";
 import { useNavigate } from "react-router-dom";
+import "./App.css";
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = React.useState([]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((data) => {
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div className="app-container">
         <nav>
           <ul>
             <li>
@@ -28,9 +29,6 @@ function App() {
             <li>
               <Link to="/users">Users</Link>
             </li>
-            <li>
-              <Link to="/user">User</Link>
-            </li>
           </ul>
         </nav>
         <Routes>
@@ -38,7 +36,9 @@ function App() {
           <Route path="/users" element={<Users users={users} />} />
           <Route path="/users/:id" element={<User users={users} />} />
         </Routes>
-        <footer>Footer</footer>
+        <footer className="footer">
+          <p>&copy; {new Date().getFullYear()} Visos teisės saugomos</p>
+        </footer>
       </div>
     </Router>
   );
@@ -46,9 +46,9 @@ function App() {
 
 function Home() {
   return (
-    <div>
-      <h1>Sveiki atvykę į grožio pasaulį</h1>
-      <img src={heroImg} alt="Hero" />
+    <div className="home-container">
+      <h1>Sveiki atvykę į grožio pasaulį!</h1>
+      <img src={heroImg} alt="Hero" className="hero-image" />
     </div>
   );
 }
@@ -61,13 +61,17 @@ function Users({ users }) {
   };
 
   return (
-    <div>
+    <div className="users-container">
       <h1>Users</h1>
-      {users.map((user) => (
-        <div key={user.id}>
-          <button onClick={() => handleUserClick(user.id)}>{user.name}</button>
-        </div>
-      ))}
+      <ul className="user-list">
+        {users.map((user) => (
+          <li key={user.id} className="user-item">
+            <button onClick={() => handleUserClick(user.id)}>
+              {user.name}
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -81,9 +85,9 @@ function User({ users }) {
   }
 
   return (
-    <div>
+    <div className="user-container">
       <h1>User Information</h1>
-      <div>
+      <div className="user-card">
         <h2>{user.name}</h2>
         <p>Email: {user.email}</p>
         <p>Phone: {user.phone}</p>

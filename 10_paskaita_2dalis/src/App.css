@@ -1,0 +1,67 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  background-color: blanchedalmond;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+.home-container {
+  text-align: center;
+}
+.home-container h1 {
+  color: grey;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 400px;
+}
+
+.users-container {
+  text-align: center;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.user-item {
+  margin: 10px;
+}
+
+.user-container {
+  text-align: center;
+  background-color: blanchedalmond;
+}
+
+.user-card {
+  border: 2px solid gray;
+  padding: 10px;
+}
+
+.footer {
+  text-align: center;
+  color: grey;
+  background-color: blanchedalmond;
+}
