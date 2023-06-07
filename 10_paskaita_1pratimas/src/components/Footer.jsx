@@ -12,7 +12,7 @@ const Footer = () => {
             <Link to="/">Pagrindinis</Link>
           </li>
           <li className="menu-item">
-            <Link to="/apiemus">Apie Mus</Link>
+            <Link to="/apie-mus">Apie Mus</Link>
           </li>
           <li className="menu-item">
             <Link to="/naujienos">Naujienos</Link>
@@ -21,7 +21,7 @@ const Footer = () => {
             <Link to="/paslaugos">Paslaugos</Link>
           </li>
           <li className="menu-item">
-            <Link to="/atliktidarbai">Atlikti Darbai</Link>
+            <Link to="/atlikti-darbai">Atlikti Darbai</Link>
           </li>
           <li className="menu-item">
             <Link to="/kontaktai">Kontaktai</Link>

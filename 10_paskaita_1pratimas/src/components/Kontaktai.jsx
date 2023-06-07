@@ -18,7 +18,7 @@ const Kontaktai = () => {
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
-        <label htmlFor="vardas">Vardas:</label>
+        <label for="vardas">Vardas:</label>
         <input
           type="text"
           id="vardas"
@@ -26,7 +26,7 @@ const Kontaktai = () => {
           onChange={(e) => setVardas(e.target.value)}
         />
 
-        <label htmlFor="email">El. paštas:</label>
+        <label for="email">El. paštas:</label>
         <input
           type="email"
           id="email"
@@ -34,7 +34,7 @@ const Kontaktai = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <label htmlFor="zinute">Žinutė:</label>
+        <label for="zinute">Žinutė:</label>
         <textarea
           id="zinute"
           value={zinute}
