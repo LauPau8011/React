@@ -77,8 +77,8 @@ function Users({ users }) {
 }
 
 function User({ users }) {
-  const userId = window.location.pathname.split("/users/")[1];
-  const user = users.find((u) => u.id === parseInt(userId));
+  const userId = window.location.pathname.split("/users/")[1]; //savybė, kuri grąžina URL kelio dalį (be domeno ir parametrų).[1]reiškia, kad gautas masyvas yra padalintas į dvi dalis: prieš "/users/" dalį ir po jo dalį.
+  const user = users.find((u) => u.id === parseInt(userId)); //Jeigu sąlyga tenkinama tuomet reiškia, kad buvo rastas vartotojas, kurio identifikatorius atitinka userId. Šis rastas vartotojas yra grąžinamas kaip rezultatas.
 
   if (!user) {
     return <div>Loading...</div>;
