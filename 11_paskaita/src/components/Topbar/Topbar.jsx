@@ -4,6 +4,7 @@ import { UserContext } from "../../context/UserContext";
 import { MAIN_ROUTE, CONTACTS_ROUTE, PROFILE_ROUTE } from "../../routes/const";
 import { showUserFullName } from "../../utils/user";
 import { FaUserCircle } from "react-icons/fa";
+import logotipas from "../../images/logotipas.jpg";
 import "./Topbar.css";
 
 const Topbar = () => {
@@ -11,7 +12,9 @@ const Topbar = () => {
 
   return (
     <nav className="navigation">
-      <div>Logo</div>
+      <div>
+        <img src={logotipas} alt="Logo" />
+      </div>
       <div>
         <Link to={MAIN_ROUTE}>Home</Link>
       </div>
