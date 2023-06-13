@@ -1,29 +1,25 @@
-import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useContext } from "react";
 import { UserContext } from "../../context/UserContext";
-import Button from "../../components/Button/Button";
 import FormItem from "../../components/FormItem/FormItem";
-import { LOGIN_ROUTE } from "../../routes/const";
-import "../Login/Login.scss";
+import Button from "../../components/Button/Button";
+import "./Profile.scss";
 
-// DRY - dont repeat yourself
-
-const Register = () => {
-  const { handleRegister } = useContext(UserContext);
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [date, setDate] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const Profile = () => {
+  const { user, handleUpdateUser, handleLogout } = useContext(UserContext);
+  const [name, setName] = useState(user.name);
+  const [surname, setSurname] = useState(user.surname);
+  const [date, setDate] = useState(user.date);
+  const [email, setEmail] = useState(user.email);
+  const [password, setPassword] = useState(user.password);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = { name, surname, date, email, password };
-    handleRegister(user);
+    handleUpdateUser(user);
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className="profile-form" onSubmit={handleSubmit}>
       <FormItem
         label="Name"
         containerClassname="form-item"
@@ -65,11 +61,13 @@ const Register = () => {
         required
       />
       <div className="button-container">
-        <Button>Register</Button>
-        <Link to={LOGIN_ROUTE}>Back to Login</Link>
+        <Button>Update</Button>
+        <Button type="button" variant="outlined" onClick={handleLogout}>
+          Logout
+        </Button>
       </div>
     </form>
   );
 };
 
-export default Register;
+export default Profile;
