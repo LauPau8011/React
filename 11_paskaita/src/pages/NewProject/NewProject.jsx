@@ -1,30 +1,33 @@
-import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { useNavigate, generatePath } from "react-router-dom";
+import PropTypes from "prop-types";
 import Button from "../../components/Button/Button";
 import FormItem from "../../components/FormItem/FormItem";
 import { UserContext } from "../../context/UserContext";
-import { createProject } from "../../api/projects";
-import { PROJECTS_ROUTE } from "../../routes/const";
+import { createProject, updateProject } from "../../api/projects";
+import { PROJECTS_ROUTE, PROJECT_ROUTE } from "../../routes/const";
+import { formatDate } from "../../utils/data";
 
-const NewProject = () => {
+const NewProject = ({ project }) => {
   const { user } = useContext(UserContext);
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
-  const [client, setClient] = useState("");
-  const [startingDate, setStartingDate] = useState("");
-  const [endingDate, setEndingDate] = useState("");
+  const [title, setTitle] = useState(project?.title || "");
+  const [description, setDescription] = useState(project?.description || "");
+  const [imageUrl, setImageUrl] = useState(project?.imageUrl || "");
+  const [client, setClient] = useState(project?.client || "");
+  const [startingDate, setStartingDate] = useState(
+    project?.startingDate ? formatDate(project.startingDate) : ""
+  );
+  const [endingDate, setEndingDate] = useState(
+    project?.endingDate ? formatDate(project.endingDate) : ""
+  );
   const people = [];
+  const isEditing = !!project;
 
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (!title || !description || !client || !startingDate || !endingDate) {
-      console.log("Please fill in all required fields");
-      return;
-    }
-    const project = {
+    const submittingProject = {
       userId: user.id,
       title,
       description,
@@ -35,14 +38,22 @@ const NewProject = () => {
       people,
     };
 
-    try {
-      await createProject(project);
-      navigate(PROJECTS_ROUTE);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+    const saveProject = isEditing ? updateProject : createProject;
+    const savingProject = isEditing
+      ? { id: project.id, ...submittingProject }
+      : submittingProject;
 
+    saveProject(savingProject)
+      .then(() => {
+        const route = isEditing
+          ? generatePath(PROJECT_ROUTE, { id: project.id })
+          : PROJECTS_ROUTE;
+        navigate(route);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <form onSubmit={handleSubmit}>
       <FormItem
@@ -51,6 +62,7 @@ const NewProject = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
+
       <FormItem
         type="text"
         label="Description"
@@ -80,9 +92,20 @@ const NewProject = () => {
         value={endingDate}
         onChange={(e) => setEndingDate(e.target.value)}
       />
-      <Button type="submit">Create Project</Button>
+      <Button>{isEditing ? "Edit" : "Create"} Project</Button>
     </form>
   );
 };
 
+NewProject.propTypes = {
+  project: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    imageUrl: PropTypes.string,
+    client: PropTypes.string,
+    startingDate: PropTypes.string,
+    endingDate: PropTypes.string,
+  }),
+};
 export default NewProject;

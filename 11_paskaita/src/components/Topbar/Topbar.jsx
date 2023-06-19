@@ -12,7 +12,7 @@ const Topbar = () => {
 
   return (
     <nav className="navigation">
-      <div>
+      <div className="nav-img">
         <img src={logotipas} alt="Logo" />
       </div>
       <div className="navigation-items">

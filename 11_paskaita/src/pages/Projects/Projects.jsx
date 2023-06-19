@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link, generatePath, useNavigate } from "react-router-dom";
+import { Link, generatePath } from "react-router-dom";
 import { getProjects } from "../../api/projects";
+import Button from "../../components/Button/Button";
 import ProjectCard from "./ProjectCard";
-import { PROJECT_ROUTE, CREATE_PROJECT_ROUTE } from "../../routes/const";
+import { PROJECT_ROUTE, NEW_PROJECT_ROUTE } from "../../routes/const";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     setIsLoading(true);
@@ -31,22 +31,24 @@ const Projects = () => {
     return <div>There are no projects yet.</div>;
   }
 
-  const handleCreateProject = () => {
-    navigate(CREATE_PROJECT_ROUTE);
-  };
-
   return (
-    <div className="projects">
-      {projects.map((project) => (
-        <Link
-          key={project.id}
-          to={generatePath(PROJECT_ROUTE, { id: project.id })} // generatePath tik tada kai naudojam dinaminius routus
-          className="single-project"
-        >
-          <ProjectCard title={project.title} imageUrl={project.imageUrl} />
+    <div className="projects-page">
+      <div className="projects">
+        {projects.map((project) => (
+          <Link
+            key={project.id}
+            to={generatePath(PROJECT_ROUTE, { id: project.id })} // generatePath tik tada kai naudojam dinaminius routus
+            className="single-project"
+          >
+            <ProjectCard title={project.title} imageUrl={project.imageUrl} />
+          </Link>
+        ))}
+      </div>
+      <div className="button-container">
+        <Link to={NEW_PROJECT_ROUTE}>
+          <Button>Create new project</Button>
         </Link>
-      ))}
-      <button onClick={handleCreateProject}>Create New Project</button>
+      </div>
     </div>
   );
 };
