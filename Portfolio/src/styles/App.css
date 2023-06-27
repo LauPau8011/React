@@ -1,0 +1,168 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styles */
+header {
+  width: 300px;
+}
+
+nav {
+  background: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Footer styles */
+.footer {
+  background: #be1919;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Home styles */
+.home-container {
+  background-image: url("../images/backgrounds-portfolio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.home-container h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.home-container p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.home-container .image-container {
+  margin-top: 20px;
+}
+
+.home-container .image-container img {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* About styles */
+.about-container {
+  background-image: url("../images/backgrounds-portfolio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.about-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Projects styles */
+.projects-container {
+  background-image: url("../images/backgrounds-portfolio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.projects-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.projects-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projects-container ul li {
+  margin-bottom: 10px;
+}
+
+/* Contact styles */
+
+.contact form {
+  display: flex;
+  background-image: url("../images/backgrounds-portfolio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.contact label {
+  margin-bottom: 0.5rem;
+}
+h1,
+p {
+  text-align: center;
+  margin: 20px;
+}
+
+.contact input,
+.contact textarea {
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+}
+/* Main layout styles */
+.main-layout {
+  padding: 20px;
+}
