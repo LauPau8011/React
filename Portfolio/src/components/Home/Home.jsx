@@ -6,10 +6,13 @@ import Header from "../Header/Header";
 
 const Home = () => {
   return (
-    <div className="home-container">
+    <div>
       <Header />
-      <h1>Hi, I'm Laura Januleviciute</h1>
-      <p>Ką aš darau</p>
+      <div className="home-container">
+        <h1>Hi, I'm Laura Januleviciute</h1>
+        <p>I'm a front-end web developer</p>
+      </div>
+
       {/*  <Link to="/images">
         <div className="image-container">
           <img src={background} alt="background" />
