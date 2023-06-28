@@ -1,0 +1,22 @@
+.footer {
+  background: linear-gradient(to right, #00ff00, #0000ff);
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  margin-right: 10px;
+}
+
+.menu-item:last-child {
+  margin-right: 0;
+}
+.copyright {
+  text-align: center;
+}

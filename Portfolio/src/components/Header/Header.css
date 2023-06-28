@@ -1,0 +1,56 @@
+.header {
+  width: 100vw;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to right, #00ff00, #0000ff);
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.right-section {
+  display: flex;
+  align-items: flex-end;
+  justify-items: right;
+  margin-left: 240px;
+}
+.left-section {
+  margin-right: 250px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 25px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}

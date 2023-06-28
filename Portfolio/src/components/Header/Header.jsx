@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import profile from "../../images/profile.png";
-import "../../styles/App.css";
+import "./Header.css";
 
 const Header = () => {
   return (

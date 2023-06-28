@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import "../About/About.css";
 
 const About = () => {
   return (
@@ -45,6 +47,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

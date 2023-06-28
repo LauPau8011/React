@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "name": "Laura",
+      "surname": "Januleviciute",
+      "date": "1985-05-03",
+      "email": "laura@pastas.lt",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "Lina",
+      "surname": "Linaite",
+      "date": "1999-01-02",
+      "email": "lina@pastas.lt",
+      "password": "lina123",
+      "id": 2
+    },
+    {
+      "name": "Paula",
+      "surname": "Paulauskaitė",
+      "date": "2011-08-05",
+      "email": "paula@pastas.lt",
+      "password": "paula",
+      "id": 3
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Reconstruction of the administration building in Vilnius",
+      "description": "Reconstruction work of an administration building located at T. Ševčenkos Street 13, Vilnius, was performed. Main work: dismantling of floors, reinforced concrete structures, masonry walls, and openings. Demolition work of one part of the building, removal of construction scrap, and preparation of the territory for construction work.",
+      "imageUrl": "https://mlg8ncvavrmb.i.optimole.com/4skBQHY-iJvA3T7A/w:2000/h:1500/q:mauto/f:avif/https://bdt.lt/wp-content/uploads/2021/07/8_T.Svecenkos-g.-5.jpg",
+      "client": "Merko statyba, UAB",
+      "startingDate": "2023-06-14",
+      "endingDate": "2024-06-14",
+      "people": []
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "Vilnius stadium",
+      "description": "Reconstruction work of an administration building located at T. Ševčenkos Street 13, Vilnius, was performed. Main work: dismantling of floors, reinforced concrete structures, masonry walls, and openings. Demolition work of one part of the building, removal of construction scrap, and preparation of the territory for construction work.",
+      "imageUrl": "https://www.lrt.lt/img/2022/08/29/1331261-944016-756x425.jpg",
+      "client": "Merko statyba, UAB",
+      "startingDate": "2023-06-14",
+      "endingDate": "2024-06-14",
+      "people": []
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "Panemunes Rezidencija",
+      "description": "Residental \"Panemunes Rezidencija\" Floors: 5 End of construction: 2009, 1st half More visualizations. \"Centro namas\" Floors: 8 End of construction...",
+      "imageUrl": "https://i.pinimg.com/564x/3e/09/79/3e09793601271520cdd4bb603ea16233.jpg",
+      "client": "Kauno Savivaldybe",
+      "startingDate": "2008-12-12",
+      "endingDate": "2009-02-12",
+      "people": []
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+.projects-container {
+  background-image: url("../../images/backgrounds-portfolio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.projects-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projects-container ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.projects-container li img {
+  flex-shrink: 0;
+  width: 200px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.projects-container .project-info {
+  text-align: right;
+}
+
+.projects-container .project-info h2 {
+  margin-bottom: 10px;
+}
+
+.projects-container .project-info p {
+  margin-bottom: 20px;
+}

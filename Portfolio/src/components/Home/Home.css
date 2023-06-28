@@ -1,0 +1,35 @@
+.home-container {
+  background-image: url("../../images/backgrounds-portfolio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.home-container h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.home-container p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.home-container .image-container {
+  margin-top: 20px;
+}
+
+.home-container .image-container img {
+  width: 100%;
+  max-width: 500px;
+}
